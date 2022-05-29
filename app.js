@@ -11,7 +11,7 @@ const dompurify = createDompurify(new JSDOM().window)
 
 const path = require('path')
 const fs =require("fs")
-const port = 80;
+const port =process.env.PORT || 80;
 
 main().catch(err => console.log(err));
 async function main() {

@@ -4,7 +4,9 @@
   "description": "bloging website",
   "main": "index.js",
   "scripts": {
-    "divstart": "nodemon app.js"
+    "divstart": "nodemon app.js",
+    "start": "nodesrc/app.js"
+
   },
   "keywords": [
     "blog"
