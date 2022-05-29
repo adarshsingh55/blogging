@@ -7,6 +7,8 @@ const methodOverride =require("method-override")// to over rite method pf forms
 const createDompurify = require("dompurify")
 const {JSDOM } = require("jsdom")
 const dompurify = createDompurify(new JSDOM().window)
+var favicon = require('serve-favicon');
+app.use(favicon(__dirname + '/static/favicon.png'));
 
 
 const path = require('path')

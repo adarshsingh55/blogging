@@ -6,7 +6,6 @@
   "scripts": {
     "divstart": "nodemon app.js",
     "start": "node src/app.js"
-
   },
   "keywords": [
     "blog"
@@ -21,6 +20,8 @@
     "marked": "^4.0.16",
     "method-override": "^3.0.0",
     "mongoose": "^6.3.3",
+    "serve": "^13.0.2",
+    "serve-favicon": "^2.5.0",
     "slugify": "^1.6.5"
   }
 }
