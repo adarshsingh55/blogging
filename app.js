@@ -15,7 +15,7 @@ const port = process.env.PORT || 80;
 
 main().catch(err => console.log(err));
 async function main() {
-  await mongoose.connect('mongodb://localhost:27017/blog');
+  await mongoose.connect('mongodb+srv://vaibhav:a12345d@vaibhav.kbcq1.mongodb.net/blog?retryWrites=true&w=majority');
 }
 
 app.use(express.urlencoded({extended :false}))
