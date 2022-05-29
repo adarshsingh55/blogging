@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "divstart": "nodemon app.js",
-    "start": "nodesrc/app.js"
+    "start": "node src/app.js"
 
   },
   "keywords": [
