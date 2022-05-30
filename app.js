@@ -8,7 +8,6 @@ const createDompurify = require("dompurify")
 const {JSDOM } = require("jsdom")
 const dompurify = createDompurify(new JSDOM().window)
 var favicon = require('serve-favicon');
-// app.use(favicon(__dirname + '/static/favicon.png'));
 
 
 const path = require('path')
@@ -24,6 +23,7 @@ app.use(express.urlencoded({extended :false}))
 // useing the rourer // inartical the /start with /articals 
 // express related stuff-------------------
 app.use('/static' , express.static('static'))// seting static foder as static file
+app.use(favicon(__dirname + '/static/favicon.png'));
 app.use(methodOverride('_method'))
 
 
