@@ -25,7 +25,7 @@ markdown:{
 slug :{
     type:String,
     required:true ,
-    unique:true
+    // unique:true
 },
 sanitizedHtml :{
     type:String,

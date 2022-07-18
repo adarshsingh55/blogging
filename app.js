@@ -16,7 +16,8 @@ const port = process.env.PORT || 80;
 
 main().catch(err => console.log(err));
 async function main() {
-  await mongoose.connect('mongodb+srv://vaibhav:a12345d@vaibhav.kbcq1.mongodb.net/blog?retryWrites=true&w=majority');
+  // await mongoose.connect('mongodb+srv://vaibhav:a12345d@vaibhav.kbcq1.mongodb.net/blog?retryWrites=true&w=majority');
+  await mongoose.connect('mongodb://localhost/blog');
 }
 
 app.use(express.urlencoded({extended :false}))
@@ -48,4 +49,5 @@ app.get("/" , async (req , res)=>{
 app.listen(port , ()=>{
     console.log(`this app;octipn start at port ${port}`);
 })
-
+module.exports =app
+ 

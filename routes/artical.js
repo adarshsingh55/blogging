@@ -39,8 +39,19 @@ router.delete('/:id' ,async (req ,res)=>{
 })
 router.put('/:id', async (req ,res,next ) =>{
     req.article = await articles.findById(req.params.id)
-    next()
- }, saveArticleAndRedirect('edit'))
+    let article = req.article
+    article.title = req.body.title
+    article.description = req.body.description
+    article.markdown = req.body.markdown
+    try {
+       article = await article.findByIdAndUpdate(req.params.id,{$set:article},{new:true})
+    //    console.log(article.id);
+       res.redirect(`/articles/${article.slug}`)
+    } catch (e) {
+        console.log(e);
+        res.render(`articles/${req.params.id}`,{article : article})
+    } 
+ })
 function saveArticleAndRedirect(path) {
    return async (req ,res)=>{
         let article = req.article
@@ -57,4 +68,4 @@ function saveArticleAndRedirect(path) {
             } 
     }
 }
-module.exports =router   
+module.exports =router     
