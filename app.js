@@ -16,8 +16,9 @@ const port = process.env.PORT || 80;
 
 main().catch(err => console.log(err));
 async function main() {
-  // await mongoose.connect('mongodb+srv://vaibhav:a12345d@vaibhav.kbcq1.mongodb.net/blog?retryWrites=true&w=majority');
-  await mongoose.connect('mongodb://localhost/blog');
+  await mongoose.connect('mongodb+srv://vaibhav:a12345d@vaibhav.kbcq1.mongodb.net/blog?retryWrites=true&w=majority');
+  // await mongoose.connect('mongodb://localhost/blog');
+  console.log("connected to mongod" );
 }
 
 app.use(express.urlencoded({extended :false}))
